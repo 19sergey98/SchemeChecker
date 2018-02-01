@@ -1,6 +1,9 @@
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Properties;
 
 public class Checker {
 
@@ -95,6 +98,18 @@ public class Checker {
         checker.PrintAllFilesInPull();
         System.out.print(checker.GetAmoutOfFiles());
         //System.out.print( checker.GetFileType("C:\\Users\\Sergey\\Desktop\\SbrTech\\easyLevel.xsd"));
+
+        //create properties file
+        PropSetter propSetter = new PropSetter();
+        try {
+            propSetter.SetDefaultProperties("defaultProps.properties");
+            System.out.print("props has been set");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
 }
