@@ -1,22 +1,31 @@
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Properties;
 
 public class Checker {
 
     private ArrayList<String> FilesToCheckStr;
+    private Properties properties ;
 
-    Checker(){
+    //change props type
+    Checker() throws IOException {
         FilesToCheckStr = new ArrayList<>(1);
+        /**THAT DOESNT WORK*/
+
+        //InputStream input = new FileInputStream("defaultProps.properties");
+       // properties.load(input);
     }
+
+
     public int GetAmoutOfFiles()
     {
         return FilesToCheckStr.size();
     }
-    public void CheckJSONScheme(){}
+
+    public void CheckJSONScheme(){
+
+    }
 
     public void CheckXSDScheme(){}
 
@@ -91,7 +100,12 @@ public class Checker {
     }
 
     public static void main(String[] args){
-        Checker checker = new Checker();
+        Checker checker = null;
+        try {
+            checker = new Checker();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         checker.GetFileType("C:\\Users\\Sergey\\Desktop\\SbrTech");
         System.out.println(checker.GetAmoutOfFiles());
         checker.DeepDirScanning("C:\\Users\\Sergey\\Desktop\\SbrTech");
@@ -101,13 +115,13 @@ public class Checker {
 
         //create properties file
         PropSetter propSetter = new PropSetter();
-        try {
+        /*try {
             propSetter.SetDefaultProperties("defaultProps.properties");
             System.out.print("props has been set");
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+*/
 
 
     }
