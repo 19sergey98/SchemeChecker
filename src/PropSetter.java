@@ -11,7 +11,7 @@ public class PropSetter {
 
         properties.setProperty("checkUnlimStrings", "true");
         properties.setProperty("checkEmptyPattern", "true");
-        properties.setProperty("maxStringLength", "true");
+        properties.setProperty("maxStringLength", "300" );
         properties.setProperty("checkAdditionalProperties", "true");
         properties.setProperty("checkRequiredProperties", "true");
         properties.setProperty("checkAdditionalItems", "true");
