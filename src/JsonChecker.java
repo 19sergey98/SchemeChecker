@@ -4,15 +4,30 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import javax.xml.xpath.XPath;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class JsonChecker {
 
+    Properties properties ;
+    JsonChecker(String propertiesFileName) throws NoPropertiesFileException {
+       /*input = */;
 
+        try {
+            properties=new Properties();
+            properties.load(new FileInputStream(propertiesFileName));
+        } catch (IOException e) {
+            throw new NoPropertiesFileException();
+            //create properties file
+            //PropSetter propSetter = new PropSetter("config.properties")
+        }
+    }
 
     public ArrayList<String> CheckRequires(Set<Map.Entry<String, JsonElement>> entries, JsonArray reqrs)
     {
@@ -46,12 +61,23 @@ public class JsonChecker {
         return missingReqs;
     }
 
-    public void CheckThemAll(JsonObject curJsobj, String xPath)
+    public boolean CheckUnlimString(JsonObject obj)
     {
+        if (obj.get("type").getAsString().equals("string")) {
+            if(obj.get("maxLength")==null)
+                return false;
+            if(Integer.parseInt( properties.getProperty("maxStringLength"))< Integer.parseInt( obj.get("maxLength").getAsString()))
+                return false;
+        }
+        return true;
+    }
+
+    public void CheckThemAll(JsonObject curJsobj, String xPath) throws IOException {
         JsonObject curProps = curJsobj.getAsJsonObject("properties").getAsJsonObject();
         JsonObject nextJobject;
         ArrayList<String> keys = new ArrayList<>();
         Set<Map.Entry<String, JsonElement>> entries = curProps.entrySet();
+        Logger myLog = new Logger("logFile.txt");
 
         keys.clear();
         for (Map.Entry<String, JsonElement> entry : entries
@@ -67,10 +93,19 @@ public class JsonChecker {
             if(nextJobject.get("type").getAsString().equals("object"))
                 CheckThemAll(nextJobject,xPath+"/"+curKey);
 
-            if (nextJobject.get("type").getAsString().equals("string")) {
-                //Check What u want 4 type string
-                System.out.println("there is string type in " + xPath + "/" + curKey);
+            /***STRING CHECKING*/
+            if(properties.getProperty("checkUnlimStrings").equals("true"))
+                if (!CheckUnlimString(nextJobject)) {
+                    System.out.println("there is no maxlength or  type in " + xPath + "/" + curKey);//LOGGING
+                    myLog.AddNewNote(xPath + curKey,"string","Неограниченная длина или превышение её максимально возможного значения");
             }
+           // myLog.ClearLogFile();
+
+            //   if (nextJobject.get("type").getAsString().equals("string")) {
+         //       //Check What u want 4 type string
+         //
+         //       System.out.println("there is string type in " + xPath + "/" + curKey);
+         //   }
 
             if (nextJobject.get("type").getAsString().equals("array"))
             {
@@ -90,7 +125,7 @@ public class JsonChecker {
         }
     }
 
-    public void CheckScheme(String fileName) throws FileNotFoundException {
+    public void CheckScheme(String fileName) throws IOException {
 
         String CurrentXpath=new String();
         String Xpath="";

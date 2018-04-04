@@ -1,4 +1,4 @@
-
+/***PROPERTIES IN FILE config.properties*/
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Properties;
@@ -99,7 +99,7 @@ public class Checker {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         Checker checker = null;
         try {
             checker = new Checker();
@@ -111,7 +111,7 @@ public class Checker {
         checker.DeepDirScanning("C:\\Users\\Sergey\\Desktop\\SbrTech");
         checker.PrintAllFilesInPull();
         System.out.print(checker.GetAmoutOfFiles());
-        //System.out.print( checker.GetFileType("C:\\Users\\Sergey\\Desktop\\SbrTech\\easyLevel.xsd"));
+        //System.out.print( checker.GetFileType("C:\\Users\\Sergey\\   Desktop\\SbrTech\\easyLevel.xsd"));
 
         //create properties file
         PropSetter propSetter = new PropSetter();

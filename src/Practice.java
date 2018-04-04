@@ -28,7 +28,9 @@ public class Practice {
         //JSONObject myobj = new JSONObject();
         try {
 
-            JsonChecker jsonChecker = new JsonChecker();
+            //JsonChecker jsonChecker = new JsonChecker("config.properties");
+            //C:\SchemeChecker\config.properties
+            JsonChecker jsonChecker = new JsonChecker("config.properties");
             jsonChecker.CheckScheme("C:\\Users\\Sergey\\Desktop\\SbrTech\\easyLevel.json");
             //File file = new File(new String());
            // JsonArray myarr = new JsonArray();

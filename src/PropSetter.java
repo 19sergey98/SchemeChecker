@@ -6,6 +6,13 @@ import java.util.Properties;
 
 public class PropSetter {
 
+   public PropSetter(String s) throws IOException {
+       SetDefaultProperties(s);
+    }
+    public PropSetter() throws IOException {
+        this("config.properties");
+    }
+
     public void SetDefaultProperties(String propFileName) throws IOException {
         Properties properties = new Properties();
 
