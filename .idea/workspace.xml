@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5667a734-996e-4a7a-b85e-ac86debbb1de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SchemeChecker/Checker.class" afterPath="$PROJECT_DIR$/out/production/SchemeChecker/Checker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SchemeChecker/JsonChecker.class" afterPath="$PROJECT_DIR$/out/production/SchemeChecker/JsonChecker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SchemeChecker/Logger.class" afterPath="$PROJECT_DIR$/out/production/SchemeChecker/Logger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SchemeChecker/Practice.class" afterPath="$PROJECT_DIR$/out/production/SchemeChecker/Practice.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SchemeChecker/PropSetter.class" afterPath="$PROJECT_DIR$/out/production/SchemeChecker/PropSetter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Checker.java" afterPath="$PROJECT_DIR$/src/Checker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logFile.txt" afterPath="$PROJECT_DIR$/logFile.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JsonChecker.java" afterPath="$PROJECT_DIR$/src/JsonChecker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logger.java" afterPath="$PROJECT_DIR$/src/Logger.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Practice.java" afterPath="$PROJECT_DIR$/src/Practice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PropSetter.java" afterPath="$PROJECT_DIR$/src/PropSetter.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +21,8 @@
       <file leaf-file-name="Practice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Practice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="32" column="55" lean-forward="false" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+            <state relative-caret-position="681">
+              <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,11 +33,13 @@
       <file leaf-file-name="Logger.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="94" lean-forward="false" selection-start-line="12" selection-start-column="94" selection-end-line="12" selection-end-column="94" />
+            <state relative-caret-position="315">
+              <caret line="35" column="78" lean-forward="false" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
               <folding>
-                <element signature="e#101#102#0" expanded="true" />
-                <element signature="e#133#134#0" expanded="true" />
+                <element signature="method#AddNewNote#0;class#Logger#0" expanded="false" />
+                <element signature="method#ClearLogFile#0;class#Logger#0" expanded="false" />
+                <element signature="method#AddNewLine#0;class#Logger#0" expanded="false" />
+                <element signature="method#AddCheckedFileName#0;class#Logger#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -52,12 +48,24 @@
       <file leaf-file-name="JsonChecker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JsonChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="100" column="2" lean-forward="false" selection-start-line="100" selection-start-column="2" selection-end-line="100" selection-end-column="2" />
+            <state relative-caret-position="-1924">
+              <caret line="39" column="36" lean-forward="false" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#CheckRequires#0;class#JsonChecker#0" expanded="false" />
+                <element signature="method#CheckUnlimString#0;class#JsonChecker#0" expanded="false" />
+                <element signature="method#CheckUnlimArray#0;class#JsonChecker#0" expanded="false" />
+                <element signature="method#CheckAllNestedElements#0;class#JsonChecker#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logFile.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logFile.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,7 +73,7 @@
       <file leaf-file-name="Checker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Checker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
+            <state relative-caret-position="-141">
               <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -75,16 +83,6 @@
                 <element signature="method#DeepDirScanning#0;class#Checker#0" expanded="false" />
                 <element signature="method#PrintAllFilesInPull#0;class#Checker#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FTypes.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FTypes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -106,6 +104,8 @@
       <find>j</find>
       <find>add</find>
       <find>logge</find>
+      <find>=</find>
+      <find>CheckThemAll</find>
     </findStrings>
     <replaceStrings>
       <replace>FilesToCheckStr</replace>
@@ -131,10 +131,12 @@
         <option value="$PROJECT_DIR$/src/PropSetter.java" />
         <option value="$PROJECT_DIR$/config.properties" />
         <option value="$PROJECT_DIR$/src/Checker.java" />
-        <option value="$PROJECT_DIR$/src/Practice.java" />
         <option value="$PROJECT_DIR$/logFile" />
+        <option value="$PROJECT_DIR$/logFisaale.txt" />
         <option value="$PROJECT_DIR$/src/Logger.java" />
+        <option value="$PROJECT_DIR$/src/Practice.java" />
         <option value="$PROJECT_DIR$/src/JsonChecker.java" />
+        <option value="$PROJECT_DIR$/logFile.txt" />
       </list>
     </option>
   </component>
@@ -159,8 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,8 +182,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,7 +359,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -367,12 +368,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -386,71 +387,17 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="27" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Checker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Checker#0;class#Checker#0" expanded="false" />
-            <element signature="method#CheckJSONScheme#0;class#Checker#0" expanded="false" />
-            <element signature="method#GetFileType#0;class#Checker#0" expanded="false" />
-            <element signature="method#DeepDirScanning#0;class#Checker#0" expanded="false" />
-            <element signature="method#PrintAllFilesInPull#0;class#Checker#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JsonChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#CheckRequires#0;class#JsonChecker#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/XSDChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -521,7 +468,9 @@
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#CheckRequires#0;class#JsonChecker#0" expanded="false" />
+            <element signature="method#CheckUnlimString#0;class#JsonChecker#0" expanded="false" />
+            <element signature="method#CheckUnlimArray#0;class#JsonChecker#0" expanded="false" />
+            <element signature="method#CheckAllNestedElements#0;class#JsonChecker#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -765,24 +714,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dsa.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/WSDLChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/gson-2.6.2-sources.jar!/com/google/gson/JsonParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/XSDChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -800,16 +735,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PropSetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logFile" />
     <entry file="file://$PROJECT_DIR$/config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -826,14 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logFile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NoPropertiesFileException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -842,21 +760,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logger.java">
+    <entry file="file://$PROJECT_DIR$/src/XSDChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="94" lean-forward="false" selection-start-line="12" selection-start-column="94" selection-end-line="12" selection-end-column="94" />
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WSDLChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PropSetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
           <folding>
-            <element signature="e#101#102#0" expanded="true" />
-            <element signature="e#133#134#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logFisaale.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="55" lean-forward="false" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+        <state relative-caret-position="681">
+          <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -865,7 +806,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Checker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
+        <state relative-caret-position="-141">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -878,13 +819,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logFile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="35" column="78" lean-forward="false" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
+          <folding>
+            <element signature="method#AddNewNote#0;class#Logger#0" expanded="false" />
+            <element signature="method#ClearLogFile#0;class#Logger#0" expanded="false" />
+            <element signature="method#AddNewLine#0;class#Logger#0" expanded="false" />
+            <element signature="method#AddCheckedFileName#0;class#Logger#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/JsonChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="100" column="2" lean-forward="false" selection-start-line="100" selection-start-column="2" selection-end-line="100" selection-end-column="2" />
+        <state relative-caret-position="-1924">
+          <caret line="39" column="36" lean-forward="false" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#CheckRequires#0;class#JsonChecker#0" expanded="false" />
+            <element signature="method#CheckUnlimString#0;class#JsonChecker#0" expanded="false" />
+            <element signature="method#CheckUnlimArray#0;class#JsonChecker#0" expanded="false" />
+            <element signature="method#CheckAllNestedElements#0;class#JsonChecker#0" expanded="false" />
           </folding>
         </state>
       </provider>

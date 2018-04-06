@@ -27,15 +27,20 @@ public class Practice {
     public static void main(String[] args){
         //JSONObject myobj = new JSONObject();
         try {
-
+            String fname = "C:\\Users\\Sergey\\Desktop\\SbrTech\\easyLevel.json";
             //JsonChecker jsonChecker = new JsonChecker("config.properties");
             //C:\SchemeChecker\config.properties
-            JsonChecker jsonChecker = new JsonChecker("config.properties");
-            jsonChecker.CheckScheme("C:\\Users\\Sergey\\Desktop\\SbrTech\\easyLevel.json");
+            Logger newLog = new Logger("C:\\SchemeChecker\\logFile.txt");
+
+            JsonChecker jsonChecker = new JsonChecker("config.properties",newLog);
+            newLog.AddCheckedFileName(fname);
+            jsonChecker.CheckScheme(fname);
+
+            //newLog.ClearLogFile();
             //File file = new File(new String());
            // JsonArray myarr = new JsonArray();
             //InputStream in = new FileInputStream(file);
-           FileReader reader = new FileReader("C:\\Users\\Sergey\\Desktop\\SbrTech\\easyLevel.json");
+           //FileReader reader = new FileReader("C:\\Users\\Sergey\\Desktop\\SbrTech\\easyLevel.json");
 
            //JsonParser parser = new JsonParser();
 

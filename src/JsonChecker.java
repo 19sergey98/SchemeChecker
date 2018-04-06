@@ -16,8 +16,9 @@ import java.util.Set;
 public class JsonChecker {
 
     Properties properties ;
-    JsonChecker(String propertiesFileName) throws NoPropertiesFileException {
-       /*input = */;
+    Logger myLog;
+    JsonChecker(String propertiesFileName,Logger log) throws NoPropertiesFileException {
+       myLog=log;
 
         try {
             properties=new Properties();
@@ -36,7 +37,7 @@ public class JsonChecker {
         //NoRequires
 
         if(reqrs==null) {
-            String ds = new String("Отсутствуют обязательные параметры");
+            String ds = new String("обязательные параметры");
             missingReqs.add(ds);
             return  missingReqs;
         }
@@ -71,13 +72,22 @@ public class JsonChecker {
         }
         return true;
     }
+    public boolean CheckUnlimArray(JsonObject obj)
+    {
+        if (obj.get("type").getAsString().equals("array")) {
+            if(obj.get("maxLength")==null)
+                return false;
+            ///if(Integer.parseInt( properties.getProperty("maxStringLength"))< Integer.parseInt( obj.get("maxLength").getAsString()))
+                return false;
+        }
+        return true;
+    }
+    public void CheckAllNestedElements(JsonObject curJsobj, String xPath) throws IOException {
 
-    public void CheckThemAll(JsonObject curJsobj, String xPath) throws IOException {
         JsonObject curProps = curJsobj.getAsJsonObject("properties").getAsJsonObject();
         JsonObject nextJobject;
         ArrayList<String> keys = new ArrayList<>();
         Set<Map.Entry<String, JsonElement>> entries = curProps.entrySet();
-        Logger myLog = new Logger("logFile.txt");
 
         keys.clear();
         for (Map.Entry<String, JsonElement> entry : entries
@@ -87,17 +97,27 @@ public class JsonChecker {
 
         for (String curKey:keys
              ) {
-            //check them all
+            //check  all keys
             nextJobject=curProps.get(curKey).getAsJsonObject();
-           // System.out.println(nextJobject.get("type").getAsString());
+
+            //
             if(nextJobject.get("type").getAsString().equals("object"))
-                CheckThemAll(nextJobject,xPath+"/"+curKey);
+                CheckAllNestedElements(nextJobject,xPath+"/"+curKey);
 
             /***STRING CHECKING*/
             if(properties.getProperty("checkUnlimStrings").equals("true"))
                 if (!CheckUnlimString(nextJobject)) {
                     System.out.println("there is no maxlength or  type in " + xPath + "/" + curKey);//LOGGING
                     myLog.AddNewNote(xPath + curKey,"string","Неограниченная длина или превышение её максимально возможного значения");
+            }
+            /**Check required element**/
+            ArrayList<String> result =CheckRequires(entries,curJsobj.get("required").getAsJsonArray());
+            if (result.size() > 0) {
+                //myLog.AddNewLine("");//logging
+                for (String line : result
+                        ) {
+                    myLog.AddNewNote(xPath+curKey,"Required","отсутствует следедующий элемент "+line);
+                }
             }
            // myLog.ClearLogFile();
 
@@ -116,7 +136,7 @@ public class JsonChecker {
         /*
         if(curJsobj.get("type").equals("object"))
         {
-            CheckThemAll(curJsobj.get("proper"));
+            CheckAllNestedElements(curJsobj.get("proper"));
         }*/
 
         if(curJsobj.get("type").getAsString().equals("String"))
@@ -127,25 +147,23 @@ public class JsonChecker {
 
     public void CheckScheme(String fileName) throws IOException {
 
-        String CurrentXpath=new String();
-        String Xpath="";
+      //  String CurrentXpath=new String();
+        //String Xpath="";
 
-        //testthing
-       // fileName = "C:\\Users\\Sergey\\Desktop\\SbrTech\\easyLevel.json";
-
-         FileReader reader = new FileReader(fileName);
+        FileReader reader = new FileReader(fileName);
 
         JsonParser parser = new JsonParser();
 
         JsonObject js = parser.parse(reader).getAsJsonObject();
 
-        CheckThemAll(js,"");
+        CheckAllNestedElements(js,"");
 
-        JsonObject jsProps = js.get("properties").getAsJsonObject();
+        //JsonObject jsProps = js.get("properties").getAsJsonObject();
 
-        Set<Map.Entry<String, JsonElement>> entries = jsProps.entrySet();//will return members of your object
+       // Set<Map.Entry<String, JsonElement>> entries = jsProps.entrySet();//will return members of your object
 
-        JsonArray reqrs =  js.get("required").getAsJsonArray();
+//        JsonArray reqrs =  js.get("required").getAsJsonArray();
+
         /*
         js = jsProps.get(reqrs.get(0).getAsString()).getAsJsonObject();
         reqrs = js.get("required").getAsJsonArray();
@@ -153,7 +171,7 @@ public class JsonChecker {
         //System.out.println(entries.contains(reqrs.get(0)));
         /***THERE MUST BE ITERATING!!!!!! THRU DA NESTED OBJ*/
 
-        ArrayList<String> keys = new ArrayList<>();
+  //      ArrayList<String> keys = new ArrayList<>();
         /*while(jsProps!=null) {
 
             //filling keys array
@@ -176,12 +194,12 @@ public class JsonChecker {
                 System.out.println("vse ok");*/
             /***STRING CHECKING*/
             /***Array CHECKING*/
-            for (String curKey: keys
-                 ) {
+    //        for (String curKey: keys
+      //           ) {
                 //Check what u want
-                CurrentXpath = Xpath+curKey;
+        //        CurrentXpath = Xpath+curKey;
 
-            }
+          //  }
 
             //moving to the next level
 
